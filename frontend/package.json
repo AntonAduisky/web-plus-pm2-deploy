@@ -15,6 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "npm run build && scp -Cr ./build/* aduiskywalker@51.250.77.249:/home/aduiskywalker/web-plus-pm2-deploy/frontend",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
