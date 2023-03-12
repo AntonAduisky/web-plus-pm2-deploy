@@ -14,15 +14,14 @@ const app = express();
 mongoose.connect(DB_ADDRESS);
 
 // Только для локальных тестов. Не используйте это в продакшене
-app.use(cors());
-// let corsOptions = {
-//   origin: [
-//     "http://mestogram.nomoredomains.work",
-//     "https://mestogram.nomoredomains.work",
-//   ],
-// };
+let corsOptions = {
+  origin: [
+    "http://mestogram.nomoredomains.work",
+    "https://mestogram.nomoredomains.work",
+  ],
+};
 
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
