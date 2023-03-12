@@ -16,8 +16,8 @@ mongoose.connect(DB_ADDRESS);
 // Только для локальных тестов. Не используйте это в продакшене
 let corsOptions = {
   origin: [
-    "http://mestogram.nomoredomains.work/",
-    "https://mestogram.nomoredomains.work/",
+    "http://mestogram.nomoredomains.work",
+    "https://mestogram.nomoredomains.work",
   ],
 };
 
