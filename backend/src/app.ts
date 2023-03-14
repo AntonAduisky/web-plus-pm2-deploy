@@ -19,6 +19,8 @@ let corsOptions = {
     "http://mestogram.nomoredomains.work",
     "https://mestogram.nomoredomains.work",
   ],
+  methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
 };
 
 app.use(cors(corsOptions));
