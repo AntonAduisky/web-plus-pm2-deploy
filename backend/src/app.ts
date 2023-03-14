@@ -18,6 +18,7 @@ let corsOptions = {
   origin: [
     "http://mestogram.nomoredomains.work",
     "https://mestogram.nomoredomains.work",
+    "http://localhost:3000",
   ],
   methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
