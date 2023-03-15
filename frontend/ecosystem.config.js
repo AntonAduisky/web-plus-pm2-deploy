@@ -4,12 +4,7 @@ const { DEPLOY_USER, DEPLOY_HOST, DEPLOY_PATH, DEPLOY_REF, DEPLOY_REPO } =
   process.env;
 
 module.exports = {
-  apps: [
-    {
-      name: "frontend",
-      script: "./build/index.html",
-    },
-  ],
+  apps: [],
 
   deploy: {
     production: {
@@ -18,7 +13,8 @@ module.exports = {
       ref: DEPLOY_REF,
       repo: DEPLOY_REPO,
       path: DEPLOY_PATH,
-      "post-deploy": "cd frontend && npm i && npm run build",
+      "post-deploy":
+        "cd frontend && npm i && npm run build && pm2 startOrRestart ecosystem.config.js --env production",
     },
   },
 };
