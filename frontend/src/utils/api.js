@@ -130,6 +130,6 @@ class Api {
   }
 }
 // Замените на адрес вашего бэкенда
-const api = new Api("http://api.mestogram.nomoredomains.work");
+const api = new Api("https://api.mestogram.nomoredomains.work");
 
 export default api;
